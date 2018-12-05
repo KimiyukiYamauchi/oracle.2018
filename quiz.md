@@ -20,7 +20,7 @@
 スクリプト(1205.3.sql)
 - employees表salaryとsalaryに50を足したを12倍した値を  
 取り出すスクリプト(1205.4.sql)
-- - departments表のdepartment_id, location_name,を取り出す  
+- departments表のdepartment_id, location_id,を取り出す  
 スクリプト(1205.5.sql)
 
 
