@@ -1,5 +1,31 @@
 # オラクル課題
 
+## 12/12
+- ディレクトリ1212を作成し、以下のスクリプトを格納
+- employees表のlast_nameとfirst_nameを取得(1212.1.sql)  
+条件は、
+    - last_nameが「D」で始まり、「a」と「e」を含む
+- employees表のlast_nameとfirst_nameを取得(1212.2.sql)  
+条件は、
+    - 入社が1998年5月から1999年6月の期間
+    - 給料が$8000より少ない
+    - last_nameに「en」を含む
+- employees表のlast_nameとemailを取得(1212.3.sql)  
+条件は、
+    - 1996年入社
+    - 給料が$9000より多い
+    - 歩合給はもらっていない
+
+## 12/11
+- ディレクトリ1211を作成し、以下のスクリプトを格納
+- employees表のlast_nameとfirst_nameを取得  
+条件はlast_nameが'King'(1211.1.sql)
+- employees表のlast_nameとsalaryを取得  
+条件はsalaryが20000以上(1211.2.sql)
+- employees表のlast_nameとhire_dateを取得  
+条件はhire_dateが'08-01-01'以降(1211.3.sql)
+
+
 ## 12/06
 
 - ディレクトリ1206を作成し、以下のスクリプトを格納
