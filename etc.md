@@ -51,3 +51,15 @@ offset 5 rows fetch next 5 rows only;
 select last_name, salary from employees order by salary desc
 offset 5 rows fetch next 5 rows with ties;
 ```
+
+## 現在ログインしているユーザの確認
+
+``` sql
+select username from user_users;
+```
+
+## 所有しているテーブルの一覧
+
+``` sql
+select table_name from usr_tables;
+```
