@@ -1,6 +1,6 @@
 # オラクル課題
 
-### 01/15
+## 01/15
 
 - LOCATIONS表とCOUNTRIES表をNATURAL JOINで結合し、  
 所在地ID、番地、市、州または県、および国を表示(0115.1.sql)
