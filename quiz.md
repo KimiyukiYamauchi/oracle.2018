@@ -1,5 +1,38 @@
 # オラクル課題
 
+## 01/23
+MY_EMPLOYEES表
+
+|    Name    |   Null   |     Type     |
+|------------|----------|--------------|
+| ID         | NOT NULL | NUMBER(4)    |
+| LAST_NAME  |          | VARCHAR2(25) |
+| FIRST_NAME |          | VARCHAR2(25) |
+| USERID     |          | VARCHAR2(8)  |
+| SALARY     |          | NUMBER(9,2)  |
+
+サンプルデータ
+
+| ID | LAST_NAME | FIRST_NAME |  USERID  | SALARY |
+|:--:|-----------|------------|----------|-------:|
+|  1 | Patel     | Ralph      | rpatel   |    895 |
+|  2 | Dancs     | Betty      | bdancs   |    860 |
+|  3 | Biri      | Ben        | bbiri    |   1100 |
+|  4 | Newman    | Chad       | cnewman  |    750 |
+|  5 | Rpeburn   | Audrey     | aropebur |   1550 |
+
+- MY_EMPLOYEES表の作成(0123.1.sql)
+- サンプルの最初の行をMY_EMPLOYEES表に追加する  
+INSERT句には列リストを指定しない(0123.2.sql)
+- サンプルに2行目のをMY_EMPLOYEES表に追加  
+今度はINSERT句に列リストを指定する(0123.3.sql)
+- 残りの行をMY_EMPLOYEE表にロードするINSERT文を、  
+動的に再利用可能なスクリプト・ファイルに記述します。  
+スクリプトでは、すべての列(ID、LAST_NAME、FIRST_NAME、  
+USERIDおよびSALARY)の入力をユーザーに求める必要があります。  
+このスクリプトを0123.4.sqlファイルに保存
+- 残りのデータを上記のスクリプトファイルを用いて追加
+
 ## 01/22
 
 - 従業員の以前の職務IDと現行の職務IDを従業員IDの昇順  
