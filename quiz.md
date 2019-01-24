@@ -1,5 +1,31 @@
 # オラクル課題
 
+## 01/29
+
+#### DEPT表
+
+| 列名 | キーの種類  | NULL/一意 | FK表 | FK列 | データ型 | 長さ |
+|------|-------------|-----------|------|------|----------|-----:|
+| ID   | Primary Key |           |      |      | NUMBER   |    7 |
+| NAME |             |           |      |      | VARCHAR2 |   25 |
+
+#### EMP表
+
+| 列名       | キーの種類    | NULL/一意   | FK表   | FK列   | データ型   | 長さ   |
+| ------     | ------------- | ----------- | ------ | ------ | ---------- | -----: |
+| ID         | Primary Key   |             |        |        | NUMBER     | 7      |
+| LAST_NAME  |               |             |        |        | VARCHAR2   | 25     |
+| FIRST_NAME |               |             |        |        | VARCHAR2   | 25     |
+| DEPT_ID    |               |             | DEPT   | ID     | NUMBER     | 7       |
+
+- 上記のチャートに基づいてDEPT表を作成
+- DEPT表にhrのDEPARTMENTS表からデータをコピー。必要な列のみ
+- 上記のチャートに基づいてEMP表を作成
+- EMP表にhrのEMPLOYEES表からデータをコピー。必要な列のみ
+- hrのEMPLOYEES表の構造に基づいてEMPLOYEES2表を作成。EMPLOYEE_ID、  
+FIRST_NAME、LAST_NAME、SALARY及びDEPARTMENT_ID列のみ  
+列名はそれぞれID、FIRST_NAME、LAST_NAME、SAL、DEPT_ID
+
 ## 01/24
 - 従業員3の姓をDrexlerに変更(0124.1.sql)
 - 給与が$900未満の従業員すべての給与を$1,000に変更(0124.2.sql)
