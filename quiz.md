@@ -1,5 +1,20 @@
 # オラクル課題
 
+## 01/30
+
+- EMPLOYEES2表(01/29作成)の状態を読取り専用に変更し、データを追加  
+しようとすると読み取り専用で追加できない旨のメッセージが表示されること
+- DEPT表(01/29作成)の削除を試み、エラーとなり削除できないことを  
+確認
+- HRのEMPLOYEES表の従業員番号、従業員名および部門番号を表示する  
+EMPLOYEES_VUというビューを作成
+- HRのEMPLOYEES表の部門50のすべての従業員の従業員番号、  
+  従業員の姓、部門番号が表示される、DEPT50というビューを作成。  
+  ビューの列にはEMPNO、EMPLOYEEおよびDEPTNOというラベルを付ける  
+  セキュリティ上の理由から、ビューを通じて別の部門に従業員を変更する  
+  操作を許可しない
+- 
+
 ## 01/29
 
 #### DEPT表
@@ -19,10 +34,10 @@
 | DEPT_ID    |               |             | DEPT   | ID     | NUMBER     | 7       |
 
 - 上記のチャートに基づいてDEPT表を作成
-- DEPT表にhrのDEPARTMENTS表からデータをコピー。必要な列のみ
+- DEPT表にDEPARTMENTS表からデータをコピー。必要な列のみ
 - 上記のチャートに基づいてEMP表を作成
-- EMP表にhrのEMPLOYEES表からデータをコピー。必要な列のみ
-- hrのEMPLOYEES表の構造に基づいてEMPLOYEES2表を作成。EMPLOYEE_ID、  
+- EMP表にEMPLOYEES表からデータをコピー。必要な列のみ
+- EMPLOYEES表の構造に基づいてEMPLOYEES2表を作成。EMPLOYEE_ID、  
 FIRST_NAME、LAST_NAME、SALARY及びDEPARTMENT_ID列のみ  
 列名はそれぞれID、FIRST_NAME、LAST_NAME、SAL、DEPT_ID
 
