@@ -1,5 +1,60 @@
 # オラクル課題
 
+## 02/12
+
+- 以下の5つの表を作成する
+
+#### 表名: MEMBER
+
+|    列名    | キー | NULL/Unique | デフォルト値 | データ型 | データ長 |
+|------------|------|-------------|--------------|----------|---------:|
+| MEMBER_ID  | PK   | NN,U        |              | NUMBER   |       10 |
+| LAST_NAME  |      | NN          |              | VARCHAR2 |       25 |
+| FIRST_NAME |      |             |              | VARCHAR2 |       25 |
+| ADDRESS    |      |             |              | VARCHAR2 |      100 |
+| CITY       |      |             |              | VARCHAR2 |       30 |
+| PHONE      |      |             |              | VARCHAR2 |       15 |
+| JOIN_DATE  |      | NN          | System Date  | DATE     |          |
+
+#### 表名:TITLE
+
+| 列名          | キー   | NULL/Unique   | Check                                                           | データ型   | データ長   |
+| ------------- | ------ | ------------- | -------                                                         | ---------- | ---------:|
+| TITLE_ID      | PK     | NN,U          |                                                                 | NUMBER     | 10         |
+| TITLE         |        | NN            |                                                                 | VARCHAR2   | 60         |
+| DESCRIPTION   |        | NN            |                                                                 | VARCHAR2   | 400        |
+| RATING        |        |               | G, PG, R, <br>NC17, NR                                          | VARCHAR2   | 4          |
+| CATEGORY      |        |               | DRAMA,<br>COMEDY,<br>ACTION,<br>CHILD,<br>SCIFI,<br>DOCUMENTARY | VARCHAR2   | 20         |
+| RELEASE_DATE  |        |               |                                                                 | DATE       |            |
+
+#### 表名: TITLE_COPY
+
+|   列名   |  キー | NULL/Unique |                      Check                      | FK Ref Table | FK REF Col | データ型 | データ長 |
+|----------|-------|-------------|-------------------------------------------------|--------------|------------|----------|---------:|
+| COPY_ID  | PK    | NN,U        |                                                 |              |            | NUMBER   |       10 |
+| TITLE_ID | PK,FK | NN,U        |                                                 | TITLE        | TITLE_ID   | NUMBER   |       10 |
+| STATUS   |       | NN          | AVAILABLE,<br>DESTROYED,<br>RENTED,<br>RESERVED |              |            | VARCHAR2 | 15         |
+
+#### 表名: RENTAL
+
+|     列名     |  キー  |        デフォルト         | FK Ref Table | FK Ref Col | データ型 | データ長 |
+|--------------|--------|---------------------------|--------------|------------|----------|----------|
+| BOOK_DATE    | PK     | System Date               |              |            | DATE     |          |
+| MEMBER_ID    | PK,FK1 |                           | MEMBER       | MEMBER_ID  | NUMBER   |       10 |
+| COPY_ID      | PK,FK2 |                           | TITLE_COPY   | COPY_ID    | NUMBER   |       10 |
+| ACT_RET_DATE |        |                           |              |            | DATE     |          |
+| EXP_RET_DATE |        | System Date + <br> 2 days |              |            | DATE     |          |
+| TITLE_ID     | PK,FK2 |                           | TITLE_COPY   | TITLE_ID   | NUMBER   | 10         |
+
+#### 表名: RESERVATION
+
+|    列名   |  キー  | NULL/ Unique | FK Ref Table | FK Ref Col | データ型 | データ長 |
+|-----------|--------|--------------|--------------|------------|----------|----------|
+| RES_DATE  | PK     | NN,U         |              |            | DATE     |          |
+| MEMBER_ID | PK,FK1 | NN,U         | MEMBER       | MEMBER_ID  | NUMBER   |       10 |
+| TITLE_ID  | PK,FK2 | NN,U         | TITLE        | TITLE_ID   | NUMBER   |       10 |
+
+
 ## 02/06 - 07
 
 - 部門ごとの平均給与が最高額の部門の部門ID、その平均額及び  
