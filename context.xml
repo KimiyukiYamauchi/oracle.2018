@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Context displayName="Teach Yourself Java" docBase="selfjsp" path="/selfjsp"
+	reloadable="true">
+	<Realm className="org.apache.catalina.realm.DataSourceRealm"
+		dataSourceName="jdbc/selfjsp" localDataSource="true" 
+		roleNameCol="role" userCredCol="passwd" userNameCol="uid"
+		userRoleTable="usr_role" userTable="usr" />
+	<Resource name="jdbc/selfjsp" auth="Container"
+		type="javax.sql.DataSource" username="jsp" password="jsp"
+		driverClassName="org.mariadb.jdbc.Driver"
+        url="jdbc:mariadb://localhost:3306/jsp?useUnicode=true&amp;characterEncoding=Windows-31J" maxActive="4" maxWait="5000" maxIdle="2"
+		validationQuery="SELECT count(*) FROM book" />
+	<Resource name="jdbc/oracle" auth="Container"
+		type="javax.sql.DataSource" username="hr" password="hr"
+		driverClassName="oracle.jdbc.driver.OracleDriver"
+        url="jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.16.40.4)(PORT=1521))(LOAD_BALANCE=YES)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=orcl)))" validationQuery="SELECT count(*) FROM departments" />
+        <!--
+	<Valve className="org.apache.catalina.valves.AccessLogValve"
+		prefix="SelfJsp." suffix=".log"
+		fileDateFormat="yyyy-MM" pattern="%t %U %T %a %b" />
+	-->
+</Context>
